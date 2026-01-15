@@ -1,0 +1,10 @@
+v = Math.floor(effect("Slider Control")("Slider"));
+
+minutos = Math.floor(v / 30);
+segundos = v % 30;
+
+minTxt = (minutos < 10) ? ("0" + minutos) : minutos.toString();
+segTxt = (segundos < 10) ? ("0" + segundos) : segundos.toString();
+
+// texto fixo + timecode
+"00:00:" + minTxt + ":" + segTxt;
