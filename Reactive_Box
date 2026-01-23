@@ -1,0 +1,28 @@
+///Camada de texto - Anchor Point:
+
+a=thisComp.layer("nome da camada").sourceRectAtTime();
+
+Height=a.height;
+Width=a.width;
+Left=a.left;
+Top=a.top;
+
+x=Left+Width/2;
+y=Top+Height/2;
+
+[x,y]
+
+///************
+
+///Camada da Box - Size dentro dos parâmetros:
+
+a=thisComp.layer("nome da camada").sourceRectAtTime();
+
+Height=a.height;
+Width=a.width;
+
+p=effect("Slider Control")("Slider");
+x=Width+p;
+y=Height+p;
+
+[x,y]
