@@ -1,0 +1,2 @@
+s = Math.round(effect("Slider Control")("Slider"));
+if (s < 10) { "0" + s } else { s.toString() }
