@@ -1,0 +1,5 @@
+//Inserir seguinte animação - Opacity 0% e inserir esse código no Start
+
+var numChars = text.sourceText.length;
+var finalTime = framesToTime(numChars);
+linear(time, 0, finalTime, 0, 100);
