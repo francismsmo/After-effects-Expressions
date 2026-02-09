@@ -1,0 +1,4 @@
+w = thisComp.layer("CONTROLES").effect("Largura")("Slider");
+h = thisComp.layer("CONTROLES").effect("Altura")("Slider");
+
+[w, h]
