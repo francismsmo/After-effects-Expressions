@@ -1,0 +1,14 @@
+var delayFrames = 3; 
+var delayTime = framesToTime(delayFrames);
+var target = parent; 
+
+if (target != null) {
+    // Calcula a diferença de escala do pai
+    var escalaPaiAtrasada = target.transform.scale.valueAtTime(time - delayTime);
+    var escalaPaiAgora = target.transform.scale.valueAtTime(time);
+    var delta = escalaPaiAtrasada - escalaPaiAgora;
+
+    value + delta;
+} else {
+    value;
+}
