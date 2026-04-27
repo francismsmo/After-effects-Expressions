@@ -1,0 +1,21 @@
+var delayFrames = 3; // Ajuste aqui quantos frames de atraso você quer
+var delayTime = framesToTime(delayFrames);
+
+// Definimos o alvo (o seu objeto Control)
+var target = parent; 
+
+if (target != null) {
+    // Calculamos onde o Control estava há 'X' frames atrás
+    var delayedPos = target.transform.position.valueAtTime(time - delayTime);
+    
+    // Calculamos onde o Control está AGORA
+    var currentPos = target.transform.position.valueAtTime(time);
+    
+    // Diferença de movimento (Delta)
+    var delta = delayedPos - currentPos;
+
+    // Aplica o movimento ao valor original da camada (mantendo o layout)
+    value + delta;
+} else {
+    value;
+}
