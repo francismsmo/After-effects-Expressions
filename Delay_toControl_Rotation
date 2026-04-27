@@ -1,0 +1,14 @@
+var delayFrames = 3; 
+var delayTime = framesToTime(delayFrames);
+var target = parent; 
+
+if (target != null) {
+    // Calcula a diferença de rotação do pai
+    var rotaPaiAtrasada = target.transform.rotation.valueAtTime(time - delayTime);
+    var rotaPaiAgora = target.transform.rotation.valueAtTime(time);
+    var delta = rotaPaiAtrasada - rotaPaiAgora;
+
+    value + delta;
+} else {
+    value;
+}
