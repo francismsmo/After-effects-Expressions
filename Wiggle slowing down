@@ -1,1 +1,9 @@
 
+var startAmount = 30; // Valor inicial do tremor
+var decayRate = 10;   // Quanto diminui por segundo
+
+// Subtrai o tempo do valor inicial, mas garante que não fique menor que 0
+var dynamicAmount = Math.max(startAmount - (time * decayRate), 0);
+
+var w = wiggle(0.5, dynamicAmount);
+[w[0], w[0]]
