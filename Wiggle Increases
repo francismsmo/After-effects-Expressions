@@ -1,1 +1,26 @@
 
+// Rate defines how much the wiggle intensity increases per second
+var growthRate = 10; 
+var dynamicAmount = time * growthRate;
+
+// Wiggle(frequency, amplitude)
+var w = wiggle(0.5, dynamicAmount);
+
+[w[0], w[0]]
+
+
+
+
+
+______________________________________________________________
+
+
+
+var growthRate = 10; // Increases by 10 every second
+var limit = 30;
+
+// This will grow until it hits 30, then stay there
+var dynamicAmount = Math.min(time * growthRate, limit);
+
+var w = wiggle(0.5, dynamicAmount);
+[w[0], w[0]]
