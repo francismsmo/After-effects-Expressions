@@ -1,6 +1,12 @@
-vInicial = 150; // Velocidade no início
-desaceleracao = 20; // Quanto diminui por segundo
-t = Math.max(0, time); // Garante que o tempo não seja negativo
+var vInicial = 150; // Velocidade no início
+var desaceleracao = 20; // Quanto diminui por segundo
+var tOriginal = Math.max(0, time); // Garante que o tempo não seja negativo
 
-// Fórmula: v0*t - (a*t^2)/2
+// 1. Calcula em quanto tempo a velocidade chega a zero
+var tempoParaParar = vInicial / desaceleracao;
+
+// 2. Garante que o tempo usado no cálculo nunca ultrapasse o ponto de parada
+var t = Math.min(tOriginal, tempoParaParar);
+
+// 3. Aplica a fórmula de deslocamento (MUV)
 (vInicial * t) - (desaceleracao * Math.pow(t, 2) / 2);
