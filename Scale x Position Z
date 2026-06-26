@@ -1,0 +1,19 @@
+try {
+    // Busca a câmera ativa na composição
+    cam = thisComp.activeCamera;
+    
+    // Calcula a distância da câmera até o Ponto de Ancoragem da camada
+    distance = length(sub(position, cam.position));
+    
+    // Calcula a distância focal da câmera (ponto onde a escala é 100%)
+    zoom = cam.zoom;
+    
+    // Cria o fator de escala invertido
+    scaleFactor = (distance / zoom) * 100;
+    
+    // Aplica o fator nos eixos X, Y e Z
+    [scaleFactor, scaleFactor, scaleFactor];
+} catch(err) {
+    // Caso não haja câmera na cena, mantém a escala original para não dar erro
+    value;
+}
