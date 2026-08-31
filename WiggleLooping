@@ -1,0 +1,12 @@
+// --- CONFIGURAÇÕES ---
+freq = 2;       // Frequência (quantas vezes se move por segundo)
+amp = 50;       // Amplitude (distância/tamanho da variação)
+loopTime = 10;  // Duração do loop em segundos
+
+// --- CÁLCULO DO LOOP ---
+t = time % loopTime;
+w1 = wiggle(freq, amp, 1, 0.5, t);
+w2 = wiggle(freq, amp, 1, 0.5, t - loopTime);
+
+// Interpolação entre o primeiro e o segundo wiggle
+linear(t, 0, loopTime, w1, w2);
