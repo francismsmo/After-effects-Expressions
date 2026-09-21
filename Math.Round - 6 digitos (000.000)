@@ -1,0 +1,5 @@
+s = Math.round(effect("Slider Control")("Slider"));
+
+txt = ("000000" + s).slice(-6);
+
+txt.slice(0, 3) + "." + txt.slice(3);
