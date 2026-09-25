@@ -1,0 +1,34 @@
+// Aplicar no Start do Range Selector da camada APOIO
+// A animação começa quando o Start da camada PRINCIPAL chega a 100.
+
+var anterior = thisComp
+    .layer("PRINCIPAL")
+    .text
+    .animator("Animator 1")
+    .selector("Range Selector 1")
+    .start;
+
+var duracao = framesToTime(15);
+
+if (anterior < 100){
+    0;
+}else{
+    var inicio = time;
+
+    for (var t = time; t >= 0; t -= thisComp.frameDuration){
+        var v = thisComp
+            .layer("PRINCIPAL")
+            .text
+            .animator("Animator 1")
+            .selector("Range Selector 1")
+            .start
+            .valueAtTime(t);
+
+        if (v < 100){
+            inicio = t + thisComp.frameDuration;
+            break;
+        }
+    }
+
+    linear(time, inicio, inicio + duracao, 0, 100);
+}
